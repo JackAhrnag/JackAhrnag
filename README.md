@@ -282,82 +282,89 @@ int main()
 }
 ```
 
+<br>
 
+위의 코드는 백준 6086번의 문제풀이로서 유량 알고리즘을 연습하기에 적당하다.
 
+<br>
 
+```
+5 //간선의 개수
+A B 3
+B C 3
+C D 5
+D Z 4
+B Z 6
+```
 
+<br>
 
+입력값은 위와 같으며, 이에 따른 결과값은 3이 나온다.  
+직접 손으로 풀어보면 3이 나온다는 것을 알 수 있다.
 
+<br>
 
+---
 
+<br>
 
+# 조금 더 알아볼 게 있을까
 
+<br>
 
+위에서 말했듯 문제의 답이 f라 했을 때, 포드-풀커슨 알고리즘의 시간복잡도 중에서 최악은 O(V+E)f이다. 즉, 만약 답이 999999999999라면 시간복잡도는 기하급수적으로 늘어가데 되는 것이다.
 
+<br>
 
+아래와 같은 예시가 있다고 해보자.
 
+<br>
 
+![조금더 알아보기1](https://blogfiles.pstatic.net/20160904_141/kks227_1472998139626VcOA0_PNG/12.png?type=w3)
 
+<br>
 
+만약 컴퓨터가 [S-A-T]와 [S-B-T]의 경로를 찾아낸다면 우리는 총 유량 2000이라는 값을 바로 도출해낼 수 있다.  
+하지만 만약 [S-A-B-T]라는 경로를 찾는다면 어떻게 될까.
 
+<br>
 
+![조금더 알아보기2](https://blogfiles.pstatic.net/20160904_243/kks227_1472998139974XA0VG_PNG/13.png?type=w3)
 
+<br>
 
+[S-A-B-T]의 최소값은 1로, [S-A-B-T]경로에는 1의 유량이 흐르게 된다. 하지만 우리는 이것이 최대 유량이 아니라는 것을 알고 있기 때문에 역간선을 해야 한 다는 것을 알 수 있다.
 
+<br>
 
+![조금더 알아보기3](https://blogfiles.pstatic.net/20160904_44/kks227_1472998140226VOQz3_PNG/14.png?type=w3)
 
+<br>
 
+역간선을 이용한다면 [S-B-A-T]를 찾게 되고, 이 경로의 최소값은 1이기 때문에 1의 유량이 흐르게 된다.
 
+<br>
 
+### 그렇다 이게 반복된다.
 
+<br>
 
+하지만 이를 해결하는 방법이 있다.  
+깊이 우선 탐색(DFS)이 아닌 너비 우선 탐색(BFS)를 이용하는 것이다.  
+이를 에드몬드 카프 알고리즘이라고 하는대, 이는 다음에 알아보도록 하자.
 
+<br>
 
+---
 
+<br>
 
+참고
 
+<br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* https://blog.naver.com/PostView.nhn?blogId=kks227&logNo=220804885235
+* https://www.acmicpc.net/problem/6086
+* https://gseok.gitbooks.io/algorithm/content/b124-d2b8-c6cc-d06c-d50c-b85c-c6b0/d3ec-b4dc-d480-cee4-c2a828-ford-fulkerson-c560-b4dc-baac-b4dc-ce74-d50428-edmonds-karp.html
+* https://soobarkbar.tistory.com/198
+* https://nsgg.tistory.com/148
