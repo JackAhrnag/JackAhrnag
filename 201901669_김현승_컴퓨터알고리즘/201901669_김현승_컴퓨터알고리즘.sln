@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "201901669_김현승_컴퓨터알고리즘", "201901669_김현승_컴퓨터알고리즘\201901669_김현승_컴퓨터알고리즘.vcxproj", "{EDECCBA8-636F-4935-9F9F-ABB2100476A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDECCBA8-636F-4935-9F9F-ABB2100476A6}.Debug|x64.ActiveCfg = Debug|x64
+		{EDECCBA8-636F-4935-9F9F-ABB2100476A6}.Debug|x64.Build.0 = Debug|x64
+		{EDECCBA8-636F-4935-9F9F-ABB2100476A6}.Debug|x86.ActiveCfg = Debug|Win32
+		{EDECCBA8-636F-4935-9F9F-ABB2100476A6}.Debug|x86.Build.0 = Debug|Win32
+		{EDECCBA8-636F-4935-9F9F-ABB2100476A6}.Release|x64.ActiveCfg = Release|x64
+		{EDECCBA8-636F-4935-9F9F-ABB2100476A6}.Release|x64.Build.0 = Release|x64
+		{EDECCBA8-636F-4935-9F9F-ABB2100476A6}.Release|x86.ActiveCfg = Release|Win32
+		{EDECCBA8-636F-4935-9F9F-ABB2100476A6}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0170C1BF-4339-4666-99B7-90C269D50FF1}
+	EndGlobalSection
+EndGlobal
